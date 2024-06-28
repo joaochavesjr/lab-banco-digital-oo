@@ -1,5 +1,5 @@
-
 import java.util.ArrayList;
+
 
 public class Main {
 
@@ -10,25 +10,15 @@ public class Main {
 		Banco bancointernet = new Banco("Banco Internet", 2);
 		
 		// Criar clientes dos bancos
-		Cliente clientetrad1 = new Cliente();
-		clientetrad1.setNome("Joao");
-		clientetrad1.setCpf("12312312312312");
+		Cliente clientetrad1 = new Cliente("Joao", "12386747443");
 		
-		Cliente clientetrad2 = new Cliente();
-		clientetrad2.setNome("Jose");
-		clientetrad2.setCpf("43235312312312");
+		Cliente clientetrad2 = new Cliente("Jose", "2423424234");
 		
-		Cliente clienteinternet1 = new Cliente();
-		clienteinternet1.setNome("Maria");
-		clienteinternet1.setCpf("23245312312312");
+		Cliente clienteinternet1 = new Cliente("Maria", "12345634532");
 		
-		Cliente clienteinternet2 = new Cliente();
-		clienteinternet2.setNome("Roberto");
-		clienteinternet2.setCpf("32345312312312");
+		Cliente clienteinternet2 = new Cliente("Roberto", "54376534523");
 
-		Cliente clienteinternet3 = new Cliente();
-		clienteinternet3.setNome("Vilma");
-		clienteinternet3.setCpf("67676767634344");
+		Cliente clienteinternet3 = new Cliente("Vilma", "23476532123");
 
 		// Criar contas dos clientes
 		Conta contaclientetrad1 = new ContaCorrente(clientetrad1);
@@ -39,9 +29,9 @@ public class Main {
 		Conta contaclienteinternet3 = new ContaCorrente(clienteinternet3);
 
 		// Adicionar contas aos bancos
-		ArrayList<Conta> listacontastrad = new ArrayList<Conta>();
+		ArrayList<Conta> listacontastrad =  new ArrayList<Conta>();
 		listacontastrad.add(contaclientetrad1);
-		listacontastrad.add(contaclientetrad2);		
+	    listacontastrad.add(contaclientetrad2);		
 		bancobrasileiro.setContas(listacontastrad);
 		
 		ArrayList<Conta> listacontasinternet = new ArrayList<Conta>();

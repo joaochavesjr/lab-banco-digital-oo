@@ -1,5 +1,5 @@
 
-public abstract class Conta implements IConta {
+public abstract class Conta implements InternetConta {
 	
 	private static final int AGENCIA_PADRAO = 1;
 	private static int SEQUENCIAL = 1;
@@ -19,18 +19,16 @@ public abstract class Conta implements IConta {
 		return this.cliente.getNome();
 	}
 	
-	@Override
+
 	public void sacar(double valor) {
 		saldo -= valor;
 	}
 
-	@Override
 	public void depositar(double valor) {
 		saldo += valor;
 	}
 
-	@Override
-	public void transferir(double valor, IConta contaDestino) {
+	public void transferir(double valor, InternetConta contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
 	}
